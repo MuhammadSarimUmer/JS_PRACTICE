@@ -30,3 +30,28 @@ console.log(teacher.age);
 
 teacher.age = teacher.age + 5;
 console.log(teacher.age);
+
+// Function 1: Using includes() method
+function hasWhitespace(str) {
+    return str.includes(' ');
+}
+
+// Function 2: Using indexOf() method
+function findWhitespaceIndex(str) {
+    return str.indexOf(' ');
+}
+
+// Function 3: Using regular expression
+function hasWhitespaceRegex(str) {
+    return /\s/.test(str);
+}
+
+// Example usage
+let testString = "Hello World";
+console.log("Using includes():", hasWhitespace(testString));  // true
+console.log("Using indexOf():", findWhitespaceIndex(testString));  // 5
+console.log("Using regex:", hasWhitespaceRegex(testString));  // true
+
+// Test with string without whitespace
+let noSpaceString = "HelloWorld";
+console.log("No space string test:", hasWhitespace(noSpaceString));  // false
